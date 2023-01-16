@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'Open sans', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 75px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+  margin: 50px auto;
+  background: #2b2a2a;
+  padding: 55px;
+  border-radius: 12px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.top input {
+  width: 450px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #191818;
+  font-size: 1.2em;
+  background: #191818;
+  color: #fff;
+}
+
+.top input::placeholder {
+  color: #fff;  
+}
+
+.top button {
+  width: 45px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #191818;
+  background-color: #191818;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.top button:hover {
+  background-color: #1f1e1e;
+}
+
+.tarefas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarefas li {
+  padding: 20px;
+  background-color: #191818;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
