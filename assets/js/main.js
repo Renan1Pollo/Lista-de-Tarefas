@@ -14,17 +14,29 @@ function limparInput() {
     inputTarefa.focus();
 }
 
-function criarBotaoApagar(li) {
-    li.innerText += ' ';
-    const botaoApagar = document.createElement('button');
-    botaoApagar.innerText = 'apagar';
-    li.appendChild(botaoApagar);
-}
-
 function criarTarefa(textinput) {
     const li = document.createElement('li');
 
-    li.innerHTML = textinput;
+    const span =document.createElement('span');
+    span.classList.add('textoTarefa');
+    span.innerHTML = textinput;
+
+    const div = document.createElement('div');
+
+    const btnEditor = document.createElement('button');
+    btnEditor.classList.add('btn-acao');
+    btnEditor.innerHTML = `<span class="edit">✎</span>`;
+
+    const btnExcluir = document.createElement('button');
+    btnExcluir.classList.add('btn-acao');
+    btnExcluir.innerHTML = `<span class="trash">🗑</span>`;
+
+    div.appendChild(btnEditor);
+    div.appendChild(btnExcluir);
+
+    li.appendChild(span);
+    li.appendChild(div);
+
     lista.appendChild(li);
     limparInput();
 }
@@ -35,3 +47,4 @@ function addTarefa() {
     criarTarefa(inputTarefa.value);
     criarBotaoApagar(li);
 }
+
